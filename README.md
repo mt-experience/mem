@@ -11,3 +11,4 @@
 - 読み込むのは暗号化された"バイナリ" .pcapだったらwiresharkでas bits表示して、パケットバイト列を生bit列としてエクスポートする。
   https://qiita.com/Shinya-Yamaguchi/items/becd042f641362c432bc | 
   https://qiita.com/toshihirock/items/acbf9800f7e784118e46 | 
+- 手動で復号 https://lowleveldesign.org/2016/03/09/manually-decrypting-https-request/ | 
