@@ -9,3 +9,5 @@
   https://humo-life.net/memo/doku.php?id=%E3%82%B5%E3%83%BC%E3%83%90:ssl%E8%A8%BC%E6%98%8E%E6%9B%B8:no_start_line_pem_lib.c_707_expecting_trusted_certificate
   ファイルが UTF-8、BOM有、CR+LF になっている？UTF-8、BOM無、LF でファイルを保存してみる。
 - 読み込むのは暗号化された"バイナリ" .pcapだったらwiresharkでas bits表示して、パケットバイト列を生bit列としてエクスポートする。
+  https://qiita.com/Shinya-Yamaguchi/items/becd042f641362c432bc | 
+  https://qiita.com/toshihirock/items/acbf9800f7e784118e46 | 
