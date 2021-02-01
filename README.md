@@ -20,3 +20,9 @@
 - TLSの"Encrypted ..."をバイナリとしてエクスポートしても、RSA復号はうまくいかないかもしれない。
 - wiresharkで復号してもらったほうが早い。
 - 編集 > 設定 > "RSA keys" > .pemを追加する。 > 右クリック > ...としてデコード > OK
+
+# TLS
+- SSL/TLS https://qiita.com/Brutus/items/1015cc01d2e1eb82a526 |
+- Encrypted...部分のバイナリをopensslでデコードできなかった。なぜか？バイナリを取ってくる場所か方法を間違えた？
+- TLSのRFCの和訳 https://www.ipa.go.jp/security/rfc/RFC5246-06JA.html#062
+
