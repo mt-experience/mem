@@ -12,4 +12,11 @@
   https://qiita.com/Shinya-Yamaguchi/items/becd042f641362c432bc | 
   https://qiita.com/toshihirock/items/acbf9800f7e784118e46 | 
 - ヘッダ等の文字列の問題？ https://sabakan-haruka.hatenadiary.org/entry/20080430/1209536052 |
+- 暗号文の破損？ https://jpcloud.net/q/nmpcaxam | 
 - 手動で復号 https://lowleveldesign.org/2016/03/09/manually-decrypting-https-request/ | 
+
+# wireshark
+- Encrypted Handshake Message や TLSで送られている Application Data などはRSAで暗号化されているとする。
+- TLSの"Encrypted ..."をバイナリとしてエクスポートしても、RSA復号はうまくいかないかもしれない。
+- wiresharkで復号してもらったほうが早い。
+- 編集 > 設定 > "RSA keys" > .pemを追加する。 > 右クリック > ...としてデコード > OK
