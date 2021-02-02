@@ -21,8 +21,14 @@
 - wiresharkで復号してもらったほうが早い。
 - 編集 > 設定 > "RSA keys" > .pemを追加する。 > 右クリック > ...としてデコード > OK
 
-# TLS
+# SSL/TLS
 - SSL/TLS https://qiita.com/Brutus/items/1015cc01d2e1eb82a526 |
 - Encrypted...部分のバイナリをopensslでデコードできなかった。なぜか？バイナリを取ってくる場所か方法を間違えた？
 - TLSのRFCの和訳 https://www.ipa.go.jp/security/rfc/RFC5246-06JA.html#062
 
+# SSLのこと
+- 秘密鍵は2種類ある
+  - 1:サーバの持つ秘密鍵。公開鍵の暗号文を復号する。
+  - 2:サーバとクライアントA間で共有する秘密鍵。Handshake後にクライアントAが生成。
+- 2:をクライアントAが生成し、公開鍵で暗号化してサーバに渡す。
+- 手に入った秘密鍵が1:なら Client Key Exchange とかを探して それを復号する。
