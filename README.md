@@ -43,16 +43,16 @@
   [0..47];
 
 master_secret の長さは、常に 48 バイトである。
-- 8.1 暗号化preMaster secret の構造
-
-  ProtocolVersion client_version;
-  opaque random[46];
-
-client_version
+- 8.1 暗号化preMaster secret の構造  
+{  
+  ProtocolVersion client_version;  
+  opaque random[46];  
+}  
+client_version:
 クライアントがサポートしている、最新のバージョン。これは、バージョンロールバック攻撃を検出するのに使用される。この premaster_secret を受信すると、サーバーは、この値が ClientHello メッセージで受信した値と同じであるかをチェックすべきである。
-　
-random
-安全に生成された 46バイトの乱数。
+  
+random:
+安全に生成された 46バイトの乱数。  
 
 
 - 
