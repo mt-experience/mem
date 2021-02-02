@@ -32,6 +32,8 @@
   - 2:サーバとクライアントA間で共有する秘密鍵。Handshake後にクライアントAが生成。
 - 2:をクライアントAが生成し、公開鍵で暗号化してサーバに渡す。
 - 手に入った秘密鍵が1:なら Client Key Exchange とかを探して それを復号する。
+- TLS session ticket https://kaworu.jpn.org/security/SSL_TLS%E3%82%BB%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%81%E3%82%B1%E3%83%83%E3%83%88
+- 
 
 # 共通鍵の導出
 - preMaster secret > master secret > MAC secret + "session key"
@@ -55,4 +57,4 @@ random:
 安全に生成された 46バイトの乱数。  
 
 
-- 
+
