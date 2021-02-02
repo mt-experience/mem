@@ -36,31 +36,23 @@
 # 共通鍵の導出
 - preMaster secret > master secret > MAC secret + "session key"
 - 7.4.7.1 鍵交換と認証方式として RSA が使用されているならば、クライアントは 48 バイトの premaster_secret を生成し、サーバー証明書から取得した公開鍵、または ServerKeyExchange メッセージにて提供される一時的 RSA 鍵を使用して暗号化する。その結果を EncryptedPreMasterSecret メッセージに含め送信する。この構造は ClientKeyExchange メッセージの一種であり、これ自体は独立したメッセージというわけではない。
-- すべての鍵交換方式において、pre_master_secret を master_secret へ変換するのに、同一のアルゴリズムが使用される。master_secretが計算されると、 pre_master_secret はメモリ上から削除されるべきである。
+- すべての鍵交換方式において、pre_master_secret を master_secret へ変換するのに、同一のアルゴリズムが使用される。
 
-master_secret = PRF(pre_master_secret, "master secret",
-ClientHello.random + ServerHello.random)
-[0..47];
+  master_secret = PRF(pre_master_secret, "master secret",
+  ClientHello.random + ServerHello.random)
+  [0..47];
 
 master_secret の長さは、常に 48 バイトである。
 - 8.1 暗号化preMaster secret の構造
 
-struct {
-
-ProtocolVersion client_version;
-opaque random[46];
-
-} PreMasterSecret;
+  ProtocolVersion client_version;
+  opaque random[46];
 
 client_version
 クライアントがサポートしている、最新のバージョン。これは、バージョンロールバック攻撃を検出するのに使用される。この premaster_secret を受信すると、サーバーは、この値が ClientHello メッセージで受信した値と同じであるかをチェックすべきである。
 　
 random
 安全に生成された 46バイトの乱数。
-struct {
 
-public-key-encrypted PreMasterSecret pre_master_secret;
-
-} EncryptedPreMasterSecret;
 
 - 
