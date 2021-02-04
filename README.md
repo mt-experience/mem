@@ -56,5 +56,5 @@ client_version:
 random:
 安全に生成された 46バイトの乱数。  
 
-
+- PRFが必要。(CKM_TLS_PRFなどと呼ばれている？) RFC6101の6.2.1や6.2.2参照
 
